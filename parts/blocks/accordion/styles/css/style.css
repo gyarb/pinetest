@@ -1,0 +1,194 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  max-width: 1240px;
+}
+
+.link_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 150px;
+  height: 38px;
+  color: #000;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  border-radius: 19px;
+  background: #fff;
+}
+.link_button.link_button_header {
+  background: #000;
+  color: #fff;
+}
+
+.show-none {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .show-desktop {
+    display: block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .show-tablet {
+    display: block !important;
+  }
+}
+@media (max-width: 768px) {
+  .show-mobile {
+    display: block !important;
+  }
+}
+.wrap-accordion {
+  background: #f8f8f8;
+  width: 100%;
+  padding: 110px 0 80px;
+}
+@media (max-width: 768px) {
+  .wrap-accordion {
+    padding: 45px 0;
+  }
+}
+.wrap-accordion .accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 768px) {
+  .wrap-accordion .accordion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.wrap-accordion .accordion .col {
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .wrap-accordion .accordion .col {
+    width: 100%;
+  }
+}
+.wrap-accordion .accordion .col.col_text .description {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  font-weight: 500;
+  color: #737373;
+}
+@media (max-width: 768px) {
+  .wrap-accordion .accordion .col.col_text .description {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+}
+.wrap-accordion .accordion .col.col_text .title {
+  font-family: inherit;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 53px;
+  color: #000;
+  margin: 10px 0 0;
+  padding-right: 10%;
+}
+@media (max-width: 768px) {
+  .wrap-accordion .accordion .col.col_text .title {
+    font-family: inherit;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 38px;
+    margin: 10px 0 20px;
+  }
+}
+.wrap-accordion .accordion .col.col_accordion .accordion_items .item_title {
+  position: relative;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #737373;
+  cursor: pointer;
+  margin: 0;
+  padding: 15px 0 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+@media (max-width: 768px) {
+  .wrap-accordion .accordion .col.col_accordion .accordion_items .item_title {
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19px;
+    padding: 11px 0 14px;
+  }
+}
+.wrap-accordion .accordion .col.col_accordion .accordion_items .item_title.ui-state-active {
+  color: #000;
+  border-bottom: 1px solid transparent;
+  cursor: default;
+}
+.wrap-accordion .accordion .col.col_accordion .accordion_items .item_title.ui-state-active::after {
+  content: "-";
+  right: 3px;
+}
+.wrap-accordion .accordion .col.col_accordion .accordion_items .item_title::after {
+  position: absolute;
+  right: 0;
+  top: 13px;
+  content: "+";
+  width: 32px;
+  height: 32px;
+  color: #292d32;
+  font-family: inherit;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 32px;
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .wrap-accordion .accordion .col.col_accordion .accordion_items .item_title::after {
+    top: 4px;
+  }
+}
+.wrap-accordion .accordion .col.col_accordion .accordion_items .item_text {
+  border-bottom: 1px solid #eeeeee;
+  padding-right: 15%;
+}
+.wrap-accordion .accordion .col.col_accordion .accordion_items .item_text p {
+  margin: 0;
+  padding: 10px 0 42px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .wrap-accordion .accordion .col.col_accordion .accordion_items .item_text p {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    padding: 0 0 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

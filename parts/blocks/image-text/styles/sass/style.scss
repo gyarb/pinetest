@@ -1,0 +1,218 @@
+@import '../../../../../styles/sass/helper';
+
+.wrap-image_text {
+  width: 100%;
+  background: $colorWhite;
+  padding: 44px 0;
+  @media (max-width: $media-size-mobile) {
+    padding: 40px 0 23px;
+  }
+  .image_text {
+    @include flex();
+    @media (max-width: $media-size-mobile) {
+      @include flex($fd: column);
+    }
+    &.image_location_right {
+      @include flex($fd: row-reverse);
+      @media (max-width: $media-size-mobile) {
+        @include flex($fd: column);
+      }
+      .col {
+        &.col_text {
+          .col_text_content {
+            padding: 0 20% 0 0;
+            @media (max-width: $media-size-tablet) {
+              padding: 0 7% 0 0;
+            }
+          }
+        }
+      }
+    }
+    .col {
+      &.col_image {
+        width: 45%;
+        @media (max-width: $media-size-mobile) {
+          -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+          order: 2;
+          width: 100%;
+        }
+        img {
+          display: block;
+        }
+      }
+      &.col_text {
+        width: 55%;
+        @include flex($fd: column, $jc: center, $ai: center);
+        @media (max-width: $media-size-mobile) {
+          width: 100%;
+          @include flex($fd: column, $jc: center, $ai: flex-start);
+        }
+        .col_text_content {
+          padding: 0 0 0 20%;
+          @media (max-width: $media-size-tablet) {
+            padding: 0 0 0 7%;
+          }
+          @media (max-width: $media-size-mobile) {
+            padding: 0;
+          }
+          .description {
+            @include font($fs: 16px, $fw: 500, $lh: 22px);
+            color: $colorGrey;
+            margin-bottom: 7px;
+            @media (max-width: $media-size-mobile) {
+              @include font($fs: 12px, $fw: 500, $lh: 16px);
+            }
+          }
+          .title {
+            @include font($fs: 50px, $fw: 600, $lh: 53px);
+            margin-bottom: 30px;
+            width: 85%;
+            @media (max-width: $media-size-tablet) {
+              width: 100%;
+            }
+            @media (max-width: $media-size-mobile) {
+              @include font($fs: 36px, $fw: 600, $lh: 38px);
+            }
+          }
+          .indicators {
+            @include flex($fw: wrap);
+            margin-bottom: 10px;
+            @media (max-width: $media-size-mobile) {
+              margin-bottom: 0;
+            }
+            .col {
+              width: 37%;
+              padding-bottom: 34px;
+              @media (max-width: $media-size-tablet) {
+                width: 50%;
+              }
+              .indicator_amount {
+                display: block;
+                font-size: 45px;
+                font-weight: 400;
+                line-height: 48px;
+                @include font($fs: 45px, $fw: 400, $lh: 48px);
+                @media (max-width: $media-size-mobile) {
+                  @include font($fs: 30px, $fw: 400, $lh: 32px);
+                }
+              }
+              .indicator_description {
+                display: block;
+                @include font($fs: 14px, $fw: 500, $lh: 19px);
+                color: $colorBlack;
+              }
+            }
+          }
+          .calculator {
+            @media (max-width: $media-size-mobile) {
+              display: none;
+            }
+            .title {
+              @include font($fs: 24px, $fw: 400, $lh: 26px);
+              margin-bottom: 20px;
+            }
+            .calculator_form {
+              @include flex($jc: space-between);
+              margin-bottom: 20px;
+              width: 100%;
+              input {
+                width: 30%;
+                height: 49px;
+                border: 1px solid $colorBlack;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                padding-left: 15px;
+                @include font($fs: 14px, $fw: 400, $lh: 19px);
+                color: $colorBlack;
+                &:focus {
+                  border: 1px solid $colorBlack !important;
+                  border-radius: 0 !important;
+                  outline: 0 !important;
+                }
+              }
+              .calculator_select {
+                display: block;
+                max-width: 215px;
+                width: 100%;
+                position: relative;
+                width: 30%;
+              }
+              .new-select {
+                @include flex($ai: center);
+                height: 49px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                position: relative;
+                border: 1px solid $colorBlack;
+                padding: 0 15px 0;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                @include font($fs: 24px, $fw: 400, $lh: 26px);
+              }
+              .new-select__list {
+                position: absolute;
+                top: 51px;
+                left: 0;
+                border: 1px solid $colorBlack;
+                cursor: pointer;
+                width: 100%;
+                z-index: 2;
+                background: $colorWhite;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+              }
+              .new-select__list.on {
+                display: block;
+              }
+              .new-select__item span {
+                display: block;
+                padding: 10px 15px;
+              }
+              .new-select__item span:hover {
+                color: $colorBlack;
+                background: #f5f5f5;
+              }
+              .new-select:after {
+                content: '';
+                display: block;
+                width: 16px;
+                height: 8px;
+                position: absolute;
+                right: 10px;
+                top: 20px;
+                background: url('../../../image-text/images/arrow-select.png')
+                  no-repeat right center / cover;
+                opacity: 0.6;
+                -webkit-transition: all 0.27s ease-in-out;
+                -o-transition: all 0.27s ease-in-out;
+                transition: all 0.27s ease-in-out;
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+              }
+              .new-select.on:after {
+                -webkit-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
+              }
+            }
+            .result {
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 19px;
+              .result_data {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

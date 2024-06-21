@@ -1,0 +1,142 @@
+@import url('../../slick/slick.css');
+@import '../../../../../styles/sass/helper';
+
+.wrap-pine_slider {
+  position: relative;
+  .slide {
+    background-size: cover;
+    background-position: center center;
+    .slide_content {
+      margin-top: 190px;
+      margin-bottom: 150px;
+      color: $colorWhite;
+      @media (max-width: $media-size-mobile) {
+        text-align: center;
+        margin-top: 65px;
+        margin-bottom: 120px;
+      }
+      .title {
+        @include font($fs: 58px, $fw: 700, $lh: 64px);
+        width: 50%;
+        margin-bottom: 20px;
+        @media (max-width: $media-size-desktop) {
+          width: 75%;
+        }
+        @media (max-width: $media-size-mobile) {
+          width: 100%;
+          text-align: center;
+          @include font($fs: 36px, $fw: 700, $lh: 40px);
+        }
+      }
+      .text {
+        @include font($fs: 16px, $fw: 500, $lh: 22px);
+        width: 30%;
+        margin-bottom: 30px;
+        @media (max-width: $media-size-desktop) {
+          width: 60%;
+        }
+        @media (max-width: $media-size-mobile) {
+          width: 100%;
+          text-align: center;
+          @include font($fs: 14px, $fw: 500, $lh: 19px);
+        }
+      }
+      .link {
+        margin-bottom: 30px;
+        @media (max-width: $media-size-mobile) {
+          @include flex($jc: center);
+        }
+      }
+      .properties {
+        list-style: none;
+        padding: 0;
+        display: inline-block;
+        li {
+          padding-left: 25px;
+          position: relative;
+          margin-bottom: 7px;
+          text-align: left;
+          @include font($fs: 16px, $fw: 500, $lh: 22px);
+          @media (max-width: $media-size-mobile) {
+            padding-top: 3px;
+            @include font($fs: 12px, $fw: 500, $lh: 16px);
+          }
+          &::before {
+            display: inline-block;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 20px;
+            width: 20px;
+            background-image: url('../../images/icon-list-circle.png');
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    bottom: 10vw;
+    z-index: 999;
+    height: 24px;
+    width: 24px;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    @media (max-width: $media-size-mobile) {
+      bottom: 47px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &.slick-prev {
+      right: calc(50vw - ($media-size-desktop / 2 - $container-padding) + 60px);
+      background-image: url(../../images/arrow-left.png);
+      @media (max-width: $media-size-desktop) {
+        right: $container-padding + 60px;
+      }
+      @media (max-width: $media-size-mobile) {
+        right: calc(50vw + 30px);
+      }
+    }
+    &.slick-next {
+      right: calc(50vw - ($media-size-desktop / 2 - $container-padding));
+      background-image: url(../../images/arrow-right.png);
+      @media (max-width: $media-size-desktop) {
+        right: $container-padding;
+      }
+      @media (max-width: $media-size-mobile) {
+        right: calc(50vw - 30px);
+      }
+    }
+  }
+  .pbar {
+    position: absolute;
+    top: 190px;
+    right: calc(50vw - ($media-size-desktop / 2 - $container-padding));
+    color: $colorWhite;
+    @media (max-width: $media-size-mobile) {
+      display: none;
+    }
+    @media (max-width: $media-size-desktop) {
+      right: $container-padding;
+    }
+    @include flex($fd: column, $ai: center);
+    .pbar_number {
+      @include font($fs: 16px, $fw: 500, $lh: 22px);
+    }
+    .pbar_line {
+      height: 94px;
+      width: 1px;
+      background-color: rgba(255, 255, 255, 0.3);
+      margin: 12px 0;
+      .pbar_filler {
+        display: block;
+        background-color: $colorWhite;
+        width: 1px;
+      }
+    }
+  }
+}

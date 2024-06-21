@@ -1,0 +1,97 @@
+@import '../../../../../styles/sass/helper';
+
+.wrap-accordion {
+  background: #f8f8f8;
+  width: 100%;
+  padding: 110px 0 80px;
+  @media (max-width: $media-size-mobile) {
+    padding: 45px 0;
+  }
+  .accordion {
+    @include flex();
+    @media (max-width: $media-size-mobile) {
+      @include flex($fd: column);
+    }
+    .col {
+      width: 50%;
+      @media (max-width: $media-size-mobile) {
+        width: 100%;
+      }
+      &.col_text {
+        .description {
+          @include font($fs: 16px, $fw: 500, $lh: 22px);
+          font-weight: 500;
+          color: $colorGrey;
+          @media (max-width: $media-size-mobile) {
+            @include font($fs: 12px, $fw: 500, $lh: 16px);
+          }
+        }
+        .title {
+          @include font($fs: 50px, $fw: 600, $lh: 53px);
+          color: $colorBlack;
+          margin: 10px 0 0;
+          padding-right: 10%;
+          @media (max-width: $media-size-mobile) {
+            @include font($fs: 36px, $fw: 600, $lh: 38px);
+            margin: 10px 0 20px;
+          }
+        }
+      }
+      &.col_accordion {
+        .accordion_items {
+          .item_title {
+            position: relative;
+            @include font($fs: 24px, $fw: 400, $lh: 26px);
+            color: $colorGrey;
+            cursor: pointer;
+            margin: 0;
+            padding: 15px 0 20px;
+            border-bottom: 1px solid #eeeeee;
+            @media (max-width: $media-size-mobile) {
+              @include font($fs: 18px, $fw: 400, $lh: 19px);
+              padding: 11px 0 14px;
+            }
+            &.ui-state-active {
+              color: $colorBlack;
+              border-bottom: 1px solid transparent;
+              cursor: default;
+              &::after {
+                content: '-';
+                right: 3px;
+              }
+            }
+            &::after {
+              position: absolute;
+              right: 0;
+              top: 13px;
+              content: '+';
+              width: 32px;
+              height: 32px;
+              color: #292d32;
+              @include font($fs: 32px, $fw: 300, $lh: 32px);
+              text-align: right;
+              @media (max-width: $media-size-mobile) {
+                top: 4px;
+              }
+            }
+          }
+          .item_text {
+            border-bottom: 1px solid #eeeeee;
+            padding-right: 15%;
+            // height: auto !important;
+            p {
+              margin: 0;
+              padding: 10px 0 42px;
+              @include font($fs: 16px, $fw: 500, $lh: 22px);
+              color: $colorBlack;
+              @media (max-width: $media-size-mobile) {
+                @include font($fs: 14px, $fw: 500, $lh: 19px);
+                padding: 0 0 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

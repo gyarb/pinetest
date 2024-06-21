@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import 'helper';
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    padding: 0;
+    margin: 0;
+  }
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+.header_top {
+  @include flex($ai: center);
+  padding: 9px 0;
+  background: $colorWhite;
+  @media (max-width: $media-size-tablet) {
+    display: block;
+    position: relative;
+  }
+  .header_top_left {
+    @include flex($ai: center);
+    .logo {
+      width: 108px;
+      height: 42px;
+    }
+  }
+  .header_top_right {
+    @include flex($jc: space-between, $ai: center);
+    background: $colorWhite;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding-left: 4.5vw;
+    @media (max-width: $media-size-tablet) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -$container-padding;
+      padding: 0 $container-padding;
+      z-index: 999;
+    }
+    #menu-main-menu {
+      @include flex();
+      @media (max-width: $media-size-tablet) {
+        display: none;
+        padding-bottom: 40px;
+      }
+      li {
+        margin: 0 13px;
+        @media (max-width: $media-size-tablet) {
+          margin: 0;
+          text-align: center;
+        }
+        a {
+          color: $colorGrey;
+          @include font($fs: 16px, $fw: 500, $lh: 22px);
+          &:hover {
+            color: $colorBlack;
+          }
+          @media (max-width: $media-size-tablet) {
+            padding: 10px 0;
+          }
+        }
+        &.current-menu-item {
+          a {
+            color: $colorBlack;
+          }
+        }
+      }
+    }
+    .link_button_header {
+      @media (max-width: $media-size-tablet) {
+        margin-bottom: 40px;
+        display: none;
+      }
+    }
+    .mobile_menu_button {
+      display: none;
+      height: 60px;
+      width: 100%;
+      @media (max-width: $media-size-tablet) {
+        @include flex($jc: flex-end, $ai: center);
+      }
+      .items {
+        @include flex($fd: column, $jc: space-between);
+        width: 28px;
+        height: 18px;
+        cursor: pointer;
+        .item {
+          display: block;
+          height: 3px;
+          background: $colorBlack;
+          width: 100%;
+        }
+      }
+    }
+    &.show_mobile_menu {
+      #menu-main-menu {
+        @media (max-width: $media-size-tablet) {
+          display: block;
+        }
+      }
+      .link_button_header {
+        @media (max-width: $media-size-tablet) {
+          @include flex($jc: center, $ai: center);
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  background: $colorBlack;
+  padding: 47px 0 0 0;
+  @media (max-width: $media-size-mobile) {
+    padding-top: 15px;
+  }
+  li a {
+    color: $colorGrey;
+    @include font($fs: 14px, $fw: 400, $lh: 19px);
+    @media (max-width: $media-size-mobile) {
+      @include font($fs: 12px, $fw: 400, $lh: 16px);
+    }
+  }
+  .footer_content {
+    @include flex($jc: space-between);
+    margin-bottom: 70px;
+    @media (max-width: $media-size-mobile) {
+      @include flex($fd: column, $jc: flex-start);
+      margin-bottom: 55px;
+    }
+    .logo {
+      @media (max-width: $media-size-mobile) {
+        margin-bottom: 38px;
+      }
+    }
+    .footer_menus {
+      @include flex($jc: space-between);
+      width: 50%;
+      @media (max-width: $media-size-tablet) {
+        width: 60%;
+      }
+      @media (max-width: $media-size-mobile) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      .footer_menu {
+        .footer_menu_title {
+          color: $colorWhite;
+          @include font($fs: 16px, $fw: 500, $lh: 22px);
+          margin: 0 0 15px;
+          @media (max-width: $media-size-mobile) {
+            @include font($fs: 14px, $fw: 600, $lh: 19px);
+          }
+        }
+        li {
+          margin: 12px 0;
+          @media (max-width: $media-size-mobile) {
+            margin: 9px 0;
+          }
+        }
+        &.have_button {
+          @include flex($fd: column, $jc: space-between);
+        }
+      }
+    }
+    .footer_button_mobile {
+      display: none;
+      @media (max-width: $media-size-mobile) {
+        display: block;
+      }
+      .link_button {
+        @media (max-width: $media-size-mobile) {
+          width: 100%;
+        }
+      }
+    }
+    .footer_button {
+      @media (max-width: $media-size-mobile) {
+        display: none;
+      }
+    }
+  }
+  .footer_bottom {
+    @include flex($jc: space-between, $ai: center);
+    padding: 16px 0;
+    border-top: 1px solid #1c1c1c;
+    @media (max-width: $media-size-mobile) {
+      @include flex($jc: space-between, $ai: flex-start);
+    }
+    .copy {
+      @include flex($ai: center);
+      @media (max-width: $media-size-mobile) {
+        display: block;
+        width: 50%;
+      }
+      .copy_text {
+        color: $colorGrey;
+        @include font($fs: 14px, $fw: 400, $lh: 19px);
+        @media (max-width: $media-size-mobile) {
+          display: inline-block;
+          @include font($fs: 10px, $fw: 400, $lh: 13px);
+        }
+      }
+      .menu-footer-bottom-menu-container {
+        @media (max-width: $media-size-mobile) {
+          display: inline;
+        }
+      }
+      #menu-footer-bottom-menu {
+        @include flex($ai: center);
+        @media (max-width: $media-size-mobile) {
+          display: inline;
+        }
+        li {
+          border-right: 1px solid $colorGrey;
+          padding: 0 12px;
+          @media (max-width: $media-size-mobile) {
+            padding: 0;
+            display: inline-block;
+            border: none;
+          }
+          a {
+            @media (max-width: $media-size-mobile) {
+              @include font($fs: 10px, $fw: 400, $lh: 13px);
+              display: inline-block;
+              border-right: 1px solid $colorGrey;
+              padding-right: 8px;
+            }
+          }
+          &:last-child {
+            a {
+              border-right: none;
+            }
+          }
+        }
+      }
+    }
+    .social {
+      @include flex($ai: center);
+      a {
+        display: block;
+        margin-left: 12px;
+      }
+    }
+  }
+}
