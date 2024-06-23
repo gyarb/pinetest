@@ -95,3 +95,7 @@
     }
   }
 }
+
+.acf-block-preview {
+  @include container();
+}

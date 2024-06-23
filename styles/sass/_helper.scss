@@ -2,7 +2,7 @@ $colorBlack: #000;
 $colorWhite: #fff;
 $colorGrey: #737373;
 
-$media-size-desktop: 1240px;
+$media-size-desktop: 1200px;
 $media-size-tablet: 1024px;
 $media-size-mobile: 768px;
 $container-padding: 20px;
@@ -93,42 +93,51 @@ $container-padding: 20px;
     flex-wrap: $fw;
   }
 }
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: $container-padding;
-  padding-right: $container-padding;
-  width: 100%;
-  max-width: $media-size-desktop;
-}
-.link_button {
-  @include flex($jc: center, $ai: center);
-  width: 150px;
-  height: 38px;
-  color: $colorBlack;
-  @include font($fs: 16px, $fw: 500, $lh: 16px);
-  border-radius: 19px;
-  background: $colorWhite;
-  &.link_button_header {
-    background: $colorBlack;
-    color: $colorWhite;
+@mixin container() {
+  .container {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+    width: 100%;
+    max-width: calc($media-size-desktop + $container-padding * 2);
   }
 }
-.show-none {
-  display: none;
-}
-@media (min-width: $media-size-tablet) {
-  .show-desktop {
-    display: block !important;
+@mixin button() {
+  .link_button {
+    @include flex($jc: center, $ai: center);
+    width: 150px;
+    height: 38px;
+    color: $colorBlack;
+    @include font($fs: 16px, $fw: 500, $lh: 16px);
+    border-radius: 19px;
+    background: $colorWhite;
+    text-decoration: none;
+    &.link_button_header {
+      background: $colorBlack;
+      color: $colorWhite;
+    }
   }
 }
-@media (min-width: $media-size-mobile) and (max-width: $media-size-tablet) {
-  .show-tablet {
-    display: block !important;
+@mixin display() {
+  .show-none {
+    display: none;
   }
-}
-@media (max-width: $media-size-mobile) {
-  .show-mobile {
-    display: block !important;
+  @media (min-width: $media-size-tablet) {
+    .show-desktop {
+      display: block !important;
+    }
+  }
+  @media (min-width: $media-size-mobile) and (max-width: $media-size-tablet) {
+    .show-tablet {
+      display: block !important;
+    }
+  }
+  @media (max-width: $media-size-mobile) {
+    .show-mobile {
+      display: block !important;
+    }
   }
 }

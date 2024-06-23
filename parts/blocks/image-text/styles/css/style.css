@@ -1,56 +1,3 @@
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 100%;
-  max-width: 1240px;
-}
-
-.link_button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 150px;
-  height: 38px;
-  color: #000;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 16px;
-  border-radius: 19px;
-  background: #fff;
-}
-.link_button.link_button_header {
-  background: #000;
-  color: #fff;
-}
-
-.show-none {
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  .show-desktop {
-    display: block !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .show-tablet {
-    display: block !important;
-  }
-}
-@media (max-width: 768px) {
-  .show-mobile {
-    display: block !important;
-  }
-}
 .wrap-image_text {
   width: 100%;
   background: #fff;
@@ -225,6 +172,9 @@
     width: 50%;
   }
 }
+.acf-block-preview .wrap-image_text .image_text .col.col_text .col_text_content .indicators .col {
+  width: 50%;
+}
 .wrap-image_text .image_text .col.col_text .col_text_content .indicators .col .indicator_amount {
   display: block;
   font-size: 45px;
@@ -375,6 +325,35 @@
 }
 .wrap-image_text .image_text .col.col_text .col_text_content .calculator .result .result_data {
   font-weight: 700;
+}
+
+.acf-block-preview .container {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  max-width: 1240px;
+}
+.acf-block-preview .show-none {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .acf-block-preview .show-desktop {
+    display: block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .acf-block-preview .show-tablet {
+    display: block !important;
+  }
+}
+@media (max-width: 768px) {
+  .acf-block-preview .show-mobile {
+    display: block !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

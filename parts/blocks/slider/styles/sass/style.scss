@@ -100,6 +100,9 @@
       @media (max-width: $media-size-mobile) {
         right: calc(50vw + 30px);
       }
+      .acf-block-preview & {
+        right: $container-padding + 60px;
+      }
     }
     &.slick-next {
       right: calc(50vw - ($media-size-desktop / 2 - $container-padding));
@@ -110,6 +113,9 @@
       @media (max-width: $media-size-mobile) {
         right: calc(50vw - 30px);
       }
+      .acf-block-preview & {
+        right: $container-padding;
+      }
     }
   }
   .pbar {
@@ -117,6 +123,9 @@
     top: 190px;
     right: calc(50vw - ($media-size-desktop / 2 - $container-padding));
     color: $colorWhite;
+    .acf-block-preview & {
+      right: $container-padding;
+    }
     @media (max-width: $media-size-mobile) {
       display: none;
     }
@@ -139,4 +148,11 @@
       }
     }
   }
+}
+
+// admin-panel
+.acf-block-preview {
+  @include container();
+  @include button();
+  @include display();
 }

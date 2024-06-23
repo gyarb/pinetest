@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 .container {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
   padding-left: 20px;
@@ -27,6 +29,7 @@
   line-height: 16px;
   border-radius: 19px;
   background: #fff;
+  text-decoration: none;
 }
 .link_button.link_button_header {
   background: #000;
@@ -457,6 +460,9 @@ img {
     display: inline-block;
     border: none;
   }
+}
+#footer .footer_bottom .copy #menu-footer-bottom-menu li:last-child {
+  border-right: none;
 }
 @media (max-width: 768px) {
   #footer .footer_bottom .copy #menu-footer-bottom-menu li a {

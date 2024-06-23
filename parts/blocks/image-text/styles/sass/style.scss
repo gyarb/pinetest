@@ -87,6 +87,9 @@
               @media (max-width: $media-size-tablet) {
                 width: 50%;
               }
+              .acf-block-preview & {
+                width: 50%;
+              }
               .indicator_amount {
                 display: block;
                 font-size: 45px;
@@ -215,4 +218,9 @@
       }
     }
   }
+}
+
+.acf-block-preview {
+  @include container();
+  @include display();
 }

@@ -1,57 +1,4 @@
 @import url("../../slick/slick.css");
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 100%;
-  max-width: 1240px;
-}
-
-.link_button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 150px;
-  height: 38px;
-  color: #000;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 16px;
-  border-radius: 19px;
-  background: #fff;
-}
-.link_button.link_button_header {
-  background: #000;
-  color: #fff;
-}
-
-.show-none {
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  .show-desktop {
-    display: block !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .show-tablet {
-    display: block !important;
-  }
-}
-@media (max-width: 768px) {
-  .show-mobile {
-    display: block !important;
-  }
-}
 .wrap-pine_slider {
   position: relative;
 }
@@ -79,7 +26,7 @@
   width: 50%;
   margin-bottom: 20px;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1200px) {
   .wrap-pine_slider .slide .slide_content .title {
     width: 75%;
   }
@@ -102,7 +49,7 @@
   width: 30%;
   margin-bottom: 30px;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1200px) {
   .wrap-pine_slider .slide .slide_content .text {
     width: 60%;
   }
@@ -184,10 +131,10 @@
   cursor: pointer;
 }
 .wrap-pine_slider .slick-arrow.slick-prev {
-  right: calc(50vw - 600px + 60px);
+  right: calc(50vw - 580px + 60px);
   background-image: url(../../images/arrow-left.png);
 }
-@media (max-width: 1240px) {
+@media (max-width: 1200px) {
   .wrap-pine_slider .slick-arrow.slick-prev {
     right: 80px;
   }
@@ -197,11 +144,14 @@
     right: calc(50vw + 30px);
   }
 }
+.acf-block-preview .wrap-pine_slider .slick-arrow.slick-prev {
+  right: 80px;
+}
 .wrap-pine_slider .slick-arrow.slick-next {
-  right: calc(50vw - 600px);
+  right: calc(50vw - 580px);
   background-image: url(../../images/arrow-right.png);
 }
-@media (max-width: 1240px) {
+@media (max-width: 1200px) {
   .wrap-pine_slider .slick-arrow.slick-next {
     right: 20px;
   }
@@ -211,10 +161,13 @@
     right: calc(50vw - 30px);
   }
 }
+.acf-block-preview .wrap-pine_slider .slick-arrow.slick-next {
+  right: 20px;
+}
 .wrap-pine_slider .pbar {
   position: absolute;
   top: 190px;
-  right: calc(50vw - 600px);
+  right: calc(50vw - 580px);
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -227,12 +180,15 @@
   -ms-flex-align: center;
   align-items: center;
 }
+.acf-block-preview .wrap-pine_slider .pbar {
+  right: 20px;
+}
 @media (max-width: 768px) {
   .wrap-pine_slider .pbar {
     display: none;
   }
 }
-@media (max-width: 1240px) {
+@media (max-width: 1200px) {
   .wrap-pine_slider .pbar {
     right: 20px;
   }
@@ -253,6 +209,60 @@
   display: block;
   background-color: #fff;
   width: 1px;
+}
+
+.acf-block-preview .container {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  max-width: 1240px;
+}
+.acf-block-preview .link_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 150px;
+  height: 38px;
+  color: #000;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  border-radius: 19px;
+  background: #fff;
+  text-decoration: none;
+}
+.acf-block-preview .link_button.link_button_header {
+  background: #000;
+  color: #fff;
+}
+.acf-block-preview .show-none {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .acf-block-preview .show-desktop {
+    display: block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .acf-block-preview .show-tablet {
+    display: block !important;
+  }
+}
+@media (max-width: 768px) {
+  .acf-block-preview .show-mobile {
+    display: block !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
