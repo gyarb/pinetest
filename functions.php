@@ -36,7 +36,7 @@ function my_acf_blocks_init()
       'enqueue_assets' => function () {
         wp_enqueue_style('block-slider', get_stylesheet_directory_uri() . '/parts/blocks/slider/styles/css/style.css', array(), filemtime(get_theme_file_path('/parts/blocks/slider/styles/css/style.css')));
         wp_enqueue_script('slick-min', get_stylesheet_directory_uri() . '/parts/blocks/slider/slick/slick.min.js', array(), '', true);
-        wp_enqueue_script('block-image-text', get_stylesheet_directory_uri() . '/parts/blocks/slider/js/script.js', array('jquery', 'slick-min'), filemtime(get_theme_file_path('/parts/blocks/slider/js/script.js')), true);
+        wp_enqueue_script('block-slider', get_stylesheet_directory_uri() . '/parts/blocks/slider/js/script.js', array('jquery', 'slick-min'), filemtime(get_theme_file_path('/parts/blocks/slider/js/script.js')), true);
       },
       'example'           => array(
         'attributes' => array(
