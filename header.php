@@ -17,17 +17,13 @@
           </div>
         </div>
         <div class="header_top_right">
-          <div class="mobile_menu_button">
-            <div class="items">
-              <span class="item"></span>
-              <span class="item"></span>
-              <span class="item"></span>
-            </div>
+          <div class="header_top_right_content">
+            <div class="mobile_menu_button"></div>
+            <?php wp_nav_menu(array('theme_location' => 'main-menu', 'container' => false)); ?>
+            <a href="./" class="link_button link_button_header">
+              Book a tour
+            </a>
           </div>
-          <?php wp_nav_menu(array('theme_location' => 'main-menu', 'container' => false)); ?>
-          <a href="./" class="link_button link_button_header">
-            Book a tour
-          </a>
         </div>
       </div>
     </div>
